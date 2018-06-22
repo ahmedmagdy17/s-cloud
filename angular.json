@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "soundCloud-V": {
+    "sound-cloud-v": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",

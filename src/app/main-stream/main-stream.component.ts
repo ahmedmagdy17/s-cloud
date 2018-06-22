@@ -66,6 +66,7 @@ export class MainStreamComponent implements OnInit {
     this.streaming.pause();
     this.isPlaying = false;
   }
+  
   playNext() {
     if (this.shuffle) {
       this.shufflePlay();

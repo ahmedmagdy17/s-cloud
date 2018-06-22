@@ -9,10 +9,6 @@ import { Router } from '@angular/router';
 export class ConnectComponent implements OnInit {
 
   constructor(private router: Router) {
-
-    //SC.stream('/tracks/293').then(function(player){
-    //  player.play();
-    //});
   }
 
   ngOnInit() {
@@ -21,5 +17,4 @@ export class ConnectComponent implements OnInit {
   connect() {    
     this.router.navigate(['mainStream']);
   }
-
 }
