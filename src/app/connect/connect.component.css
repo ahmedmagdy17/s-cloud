@@ -1,0 +1,23 @@
+.image {
+    height:700px; background-size:auto; width:auto;
+    background-image:url('/assets/images/bg2.jpg');
+    background-position:100% 100%;
+}
+
+.button {
+    position: fixed;
+    top: 90%;
+    left: 10%;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(245, 110, 0);
+    border: none;
+    border-radius: 15px;
+  }
+  
+.button:hover {background-color: #d67900}
+  

@@ -1,0 +1,33 @@
+<div class="header">
+    <h1> Main Stream </h1>
+</div>
+<div class="body">
+  <mat-list>
+      <mat-list-item *ngFor="let track of tracks; let i = index">
+        <img *ngIf="track.origin.artwork_url != null" matListAvatar [src]="track.origin.artwork_url" >
+        <img *ngIf="track.origin.artwork_url ==  null" matListAvatar [src]="track.origin.user.avatar_url" >
+        <h3 matLine> {{track.origin.title}} </h3>
+        <p matLine>
+          <span> {{track.origin.user.username}} </span>
+        </p>
+        <img width="30px" height="30px" src="assets/images/playBtn.png" (click)="playTrack(track.origin, i)" title="Play">
+        <mat-divider [inset]="true"></mat-divider>
+      </mat-list-item>
+  </mat-list>
+</div>
+<footer class="footer" *ngIf="currentTrack">
+    <h2>Now Playing</h2>
+      <img *ngIf="currentTrack.artwork_url != null" matListAvatar [src]="currentTrack.artwork_url" >
+      <img *ngIf="currentTrack.artwork_url ==  null" matListAvatar [src]="currentTrack.user.avatar_url" >
+      <h3> {{currentTrack.title}} </h3>
+      <p>
+        <span> {{currentTrack.user.username}} </span>
+      </p>
+      <div class="player">
+        <img (click)="playPrev()" width="40px" height="40px" src="assets/images/player_rew.svg">
+        <img (click)="pause()" *ngIf="isPlaying" width="40px" height="40px" src="assets/images/player_pause.svg">
+        <img (click)="play()" *ngIf="!isPlaying" width="40px" height="40px" src="assets/images/player_play.svg">
+        <img (click)="playNext()" width="40px" height="40px" src="assets/images/player_fwd.svg">
+        <mat-checkbox class="col-lg-8" ng-checked="shufflePlay()" [(ngModel)]="shuffle">Shuffle</mat-checkbox>
+      </div>
+</footer>

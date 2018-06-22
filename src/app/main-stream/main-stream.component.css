@@ -1,0 +1,23 @@
+.header {
+  background-color: rgb(248, 80, 2);
+  height: 80px;
+}
+h1 {
+  color: aliceblue; 
+  padding: 20px;
+}
+body {
+  position: relative;
+  padding: 20px;
+}
+footer {
+  background-color: rgb(248, 80, 2);
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  height: 300px;
+  width: 100%;
+}
+.player {
+  text-align: center
+}
